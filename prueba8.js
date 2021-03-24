@@ -1,6 +1,18 @@
 /* Hacer una función donde me valide si un string es palindromo  */
-
-const isPalindrome = text => text.toLowerCase().replace(/ /gi,"").split('').join() === text.toLowerCase().replace(/ /gi,"").split('').slice().reverse().join();
+/**
+ * @function isPalindrome
+ * @param {String} text - Texto a analizar 
+ * @returns {Boolean} - True si son iguales o false si no
+ */
+const isPalindrome = text =>{ 
+    let regex = / /gi; //Regex para borrar los espacios en el texto
+    let original = text.toLowerCase().replace(regex,""); //Tomamos el texto y lo pasamos a minusculas, despues borramos los espacios
+    let reverso = text.toLowerCase().replace(regex,""); //Haremos una copia del texto
+    original = original.split(""); //El texto ya mejorado, lo volvemos un arrglo
+    reverso = reverso.split("").reverse(); //Al areglo reverso lo ordenamos de forma inversa
+    //Por ultimo con join juntamos el texto y devolveremos si son el mismo o no
+    return original.join() === reverso.join();
+}
 
 
 console.log(isPalindrome('oro'));
