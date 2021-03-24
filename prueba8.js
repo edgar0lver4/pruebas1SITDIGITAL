@@ -9,9 +9,9 @@ const isPalindrome = text =>{
     let regex = / /gi; //Regex para borrar los espacios en el texto
     let original = text.toLowerCase().replace(regex,""); //Tomamos el texto y lo pasamos a minusculas, despues borramos los espacios
     let reverso = text.toLowerCase().replace(regex,""); //Haremos una copia del texto
-    original = original.split(""); //El texto ya mejorado, lo volvemos un arrglo
-    reverso = reverso.split("").reverse(); //Al areglo reverso lo ordenamos de forma inversa
-    //Por ultimo con join juntamos el texto y devolveremos si son el mismo o no
+    original = original.split(""); 
+    reverso = reverso.split("").reverse(); 
+    //Por ultimo solo comprobaremos que al volverse texto de nuevo son lo mismo
     return original.join() === reverso.join();
 }
 
