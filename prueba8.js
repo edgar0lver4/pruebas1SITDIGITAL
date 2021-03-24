@@ -3,6 +3,7 @@
  * @function isPalindrome
  * @param {String} text - Texto a analizar 
  * @returns {Boolean} - True si son iguales o false si no
+ * @description Esta funcion ve si un texto es un palindromo o no utilizando regex y reverse para mejorar el texto y hacer comparaciones
  */
 const isPalindrome = text =>{ 
     let regex = / /gi; //Regex para borrar los espacios en el texto
