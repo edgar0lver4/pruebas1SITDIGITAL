@@ -6,7 +6,7 @@
 
     */
 
-const centuryFromYear = year => parseInt((year-1)/ 100)+1;
+const centuryFromYear = year => Math.ceil(year/100);
 
 console.log(centuryFromYear(1901)); //ouput 20
 
